@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="{{url_for('static',filename = 'images/cart.png')}}">
+	<title>Add Favorite Categories</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sriracha|Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+	<div class="wrapper categories">
+		<div class="navbar">
+			<a href="#" class="left-navbar">
+				<img class="img-fluid" src="{{url_for('static', filename = 'images/cart.png')}}" >
+				<h3>2ndhnd</h3>
+			</a>
+			<ul>
+				<li><a href="/profile">Profile</a></li>
+				<li><a href="/success">Home</a></li>
+				<li><a href="/logout">Log out</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<p>Post succesfuly deleated!</p>
+		</div>
+		<footer>
+			<div class="links">
+				<p>Made in <img src="{{url_for('static', filename = 'images/kosovo.svg')}}" title = "Kosovo">  with  <i id="heart" class="fa fa-heart" aria-hidden="true"></i></p>
+				<div class="social-icons">
+					<a href="https://www.facebook.com/diellza.aliu.31945?ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/dielllza_" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/_2ndhnd_/" target="_blank"><i class="fa fa-instagram"></i></a>
+				</div>
+				<p>Icons from<a href="https://www.flaticon.com/" title="Flaticon"><img  id="flaticon" src="{{url_for('static', filename = 'images/flaticon.png')}}"></a></p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

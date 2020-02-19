@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="{{url_for('static',filename = 'images/cart.png')}}">
+	<title>Product info</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sriracha|Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/style.css')}}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" href = "{{url_for('static', filename = 'js/script.js')}}"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log("hello I work")
+			$('#owner-1-info').hide();
+			$('#view-owner-1-info').click(function(){
+				$('#owner-1-info').toggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper product-info">
+		<div class="navbar">
+			<a href="#" class="left-navbar">
+				<img class="img-fluid" src="{{url_for('static', filename = 'images/cart.png')}}" >
+				<h3>2ndhnd</h3>
+			</a>
+			<ul>
+				<li><a href="/success">Home</a></li>
+				<li><a href="/profile">Profile</a></li>
+				<li><a href="/logout">Log out</a></li>
+			</ul>
+		</div>
+		<center>
+			    <div class="card" style="width: 40rem;">
+			     	<img src="{{url_for('static', filename = 'images/products/'+ product_info['image'])}}" class="card-img-top" alt="...">
+				  	<div class="card-body">
+				    	<h5 class="card-title">{{product_info['product_name']}}</h5>
+				    	<p class="card-text">{{product_info['product_description']}}</p>
+				  	</div>
+				  	<ul class="list-group list-group-flush">
+				  		<li class="list-group-item">Category : {{" ".join(product_info['category_name'].title().split("_"))}}</li>
+				    	<li class="list-group-item">Price $: {{product_info['price']}}</li>
+				    	<li class="list-group-item">38 people like this</li>
+				  	</ul>
+				  	<div class="card-body a-tags" >
+				  		<div class="like-edit-delete">
+					    	<a href="/save/product/{{product_info['id']}}" class="card-link"><img src="{{url_for('static', filename = 'images/save.png')}}" title="save"></a>
+							    	<!-- <a href="#" class="card-link"><img src="{{url_for('static', filename = 'images/unsave.png')}}" title="unsave"></a> -->
+							{%if loggedUser == product_info['users_id'] %}
+								    	<a href="/edit/product/{{product_info['id']}}" class="card-link"><img src="{{url_for('static', filename = 'images/pencil.png')}}" title="edit"></a>
+								    	<a href="/delete/{{product_info['id']}}" class="card-link"><img src="{{url_for('static', filename = 'images/trash.png')}}" title="delete"></a>
+							{%endif%}
+					    </div>
+				    	<a href="#view-owner-1-info" id="view-owner-1-info" class="card-link">View owner info</a>
+				  	</div>
+				  	<ul class="list-group list-group-flush" id="owner-1-info">
+				  		<li class="list-group-item">Name : {{product_info['first_name']+ 
+				  		 " " + product_info['last_name']}}</li>
+				    	<li class="list-group-item">Email : {{product_info['email_address']}}</li>
+				    	<li class="list-group-item">Phone number:{{product_info['phone_number']}}</li>
+				  	</ul>
+			    </div>
+		</center>
+		<footer>
+			<div class="links">
+				<p>Made in <img src="{{url_for('static', filename = 'images/kosovo.svg')}}" title = "Kosovo">  with  <i id="heart" class="fa fa-heart" aria-hidden="true"></i></p>
+				<div class="social-icons">
+					<a href="https://www.facebook.com/diellza.aliu.31945?ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/dielllza_" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/_2ndhnd_/" target="_blank"><i class="fa fa-instagram"></i></a>
+				</div>
+				<p>Icons from<a href="https://www.flaticon.com/" title="Flaticon"><img  id="flaticon" src="{{url_for('static', filename = 'images/flaticon.png')}}"></a></p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

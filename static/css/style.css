@@ -1,0 +1,275 @@
+.wrapper{
+	background: #f5f0e3;
+	line-height: 1.5;
+	font-family: 'Raleway', sans-serif;
+}
+
+.navbar{
+	padding: 10px !important; 
+}
+	.left-navbar img{
+		width: 90px;
+		height: 90px;
+		margin-right: 7px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.left-navbar h3{
+		font-family: 'Sriracha', cursive;
+		display: inline-block;
+		vertical-align: middle;
+		color: #f0134d;
+	}
+	.navbar ul{
+		list-style: none;
+	}
+	.navbar li{
+		display: inline-block;	
+		font-family: 'Raleway', sans-serif;
+		margin-right: 25px;
+	}
+	.navbar a{
+		text-decoration: none;
+		color: #fa163f;
+	}
+	.navbar a:hover{
+		color: #39b3ab;/*#12cad6;*/
+	}
+.main-img{
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+	.main-img h1{
+		margin-top: 15px;
+		color: #39b3ab;		
+		width:80%;
+		text-align: center;
+	}
+	.main-img p{
+		margin-top: 10px;
+		width:45%;
+		text-align: center;
+	}
+	.brand-name{
+		font-family: 'Sriracha', cursive;
+		color:#f0134d;
+	}
+.why_secondhand{
+	width: 80%;
+	margin-left: 10%;
+
+}
+.reason{
+	display: flex;
+	flex-direction: row;
+	margin-top: 15px;
+	padding: 25px;
+}
+	.reason img{
+		width: 200px;
+		height: 200px;
+		vertical-align: middle;
+	}
+	.reason-text{
+		margin-left: 15px;
+		line-height: 1.2;
+		vertical-align: middle;
+	}	
+		.reason-text h4{
+			color:#f0134d;
+		}
+		.reason-text p{
+			/*font-family: Open Sans;*/
+			font-size: 15px;
+		}
+
+/******************/
+.register{
+	color: white;
+	margin-left: 17%;
+	width: 64%;
+	background-color: #39b3ab;	
+	text-align: center;
+}
+.round-corners-top{
+	border-radius: 15px 15px 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+.round-corners-bottom{
+	border-radius: 0 0 15px 15px;
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 1%;
+	margin-bottom: 5px;
+}
+
+/***********/
+.signup-login content{
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+	.signup-login content img{
+		width: 115px;
+		height: 115px;
+		margin: 15px;
+	}
+	.signup-login content p{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.signup-login  form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.signup-login  form .btn{
+		margin: 15px;
+		color: white;
+		background-color: #39b3ab;	
+	}
+	.signup-login  form .btn:hover{
+		color: white;
+		background: #4fcfbf;
+	}
+	.signup-login footer{
+		padding-top: 12px;
+	}
+	.signup-login h2{
+		margin-bottom: 15px;
+	}
+	.signup-login p a{
+		text-decoration: none;
+		color:#f0134d;
+	} 
+/*************/
+
+.categories .container img{
+	width: 85px;
+	height: 85px;
+	padding: 8px;
+}
+.categories table{
+	margin: 25px;
+}
+	.categories table .btn{
+		color: white;
+		background-color: #39b3ab;
+	}
+	.categories table .continue-btn{
+		color: white;
+		background-color:#f0134d;
+	}
+
+/***************/
+.home-page .input-form{
+	padding: 6px;
+	border: 2px solid #f0134d;
+	border-radius: 6px;
+}
+.home-page .input-btn{
+	background-color:#f0134d;
+	border: 0;
+	color: white;
+	padding: 8px;
+	border-radius: 6px;
+}
+.a-tags{
+	display: flex;
+	justify-content: space-between;
+}
+.card-body a{
+	text-decoration: none;
+	color: #3eaf91;
+}
+.like-edit-delete{
+	display: inline-block;
+}
+.like-edit-delete img{
+	width: 30px;
+	height: 30px;
+}
+/****************/
+.profile-page h2{
+	margin-bottom: 18px;
+	color: #39b3ab;	
+} 
+.profile-buttons{
+	margin: 18px 0;
+	display: flex;
+	justify-content: space-between;
+}
+/********************/
+
+.all-products-on-sale h2{
+	margin-bottom: 18px;
+	color: #39b3ab;	
+}
+
+/*****************/
+.saved-products h2{
+	margin-bottom: 18px;
+	color: #39b3ab;	
+}
+/*************/
+.product-info .card{
+	margin: 20px 0;
+}
+/****************/
+.add-product form{
+	margin: 15px 0;
+}
+#upload-img{
+	background: #a7d7c5;	
+	border-radius: 2px;
+}
+#add-new-product{
+	text-align: right;
+}
+/*****************/
+footer{
+	background: #a7d7c5;
+}
+	footer .btn{
+		color: white;
+		border-radius: 15px;
+	}
+	footer .btn:hover{
+		color: white;
+		border-radius: 15px;
+	}
+	footer a{
+		text-decoration: none;
+		color: white;
+	}
+	footer a:hover{
+		color: white;
+	}
+	footer .links{
+		color: white;
+		padding: 12px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.social-icons a{
+		margin-right: 20px;
+	}
+	#heart{
+		color: red;
+	}
+	#flaticon{
+		width: 80px;
+		height: 30px;
+	}
+.flash-messages{
+	color: red;
+}

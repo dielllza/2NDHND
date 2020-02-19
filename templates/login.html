@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="{{url_for('static',filename = 'images/cart.png')}}">
+	<title>Log in· 2nd Hand</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sriracha|Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+	<div class="wrapper signup-login">
+		<content> 
+			<img class="img-fluid" src="{{url_for('static', filename = 'images/cart.png')}}" >
+			<h2>Wellcome back to <span class="brand-name">2ndhnd</span></h2>
+			<form action="/process/login" method="POST">
+				<table>
+					<tr>
+						<td><label for="email">Email address:</label></td>
+						<td><input type="text" name="email" id="email" class="form-control" ></td>
+					</tr>
+					<tr>
+						<td><label for="password">Password:</label></td>
+						<td><input type="password" name="password" id="password" class="form-control" ></td>
+					</tr>
+				</table>
+				<input type="submit" name="register" value="Log in" class="btn">
+			</form>
+			<div class="flash-messages">
+				{% with messages = get_flashed_messages() %}     
+					{% if messages %}                            
+						{% for message in messages %}            
+				 		   <p>{{message}}</p>                   
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+			</div>
+			<p>No account? <a href="/register">Sign Up</a> </p>
+		</content>
+		<footer>
+			<div class="links">
+				<p>Made in <img src="{{url_for('static', filename = 'images/kosovo.svg')}}" title = "Kosovo">  with  <i id="heart" class="fa fa-heart" aria-hidden="true"></i></p>
+				<div class="social-icons">
+					<a href="https://www.facebook.com/diellza.aliu.31945?ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/dielllza_" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/_2ndhnd_/" target="_blank"><i class="fa fa-instagram"></i></a>
+				</div>
+				<p>Icons from<a href="https://www.flaticon.com/" title="Flaticon"><img  id="flaticon" src="{{url_for('static', filename = 'images/flaticon.png')}}"></a></p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

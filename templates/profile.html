@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="{{url_for('static',filename = 'images/cart.png')}}">
+	<title>Your Profile</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sriracha|Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/style.css')}}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" href = "{{url_for('static', filename = 'js/script.js')}}"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log("hello I work")
+			$('#owner-1-info').hide();
+			$('#view-owner-1-info').click(function(){
+				$('#owner-1-info').toggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper profile-page">
+		<div class="navbar">
+			<a href="#" class="left-navbar">
+				<img class="img-fluid" src="{{url_for('static', filename = 'images/cart.png')}}" >
+				<h3>2ndhnd</h3>
+			</a>
+			<ul>
+				<li><a href="/success">Home</a></li>
+				<li><a href="/logout">Log out</a></li>
+			</ul>
+		</div>
+		<div class="container">
+			<h2>Your products on sale:</h2>
+			{%if not products_on_sale:%}
+				<p>Looks like you haven't posted a product for sale yet!</p>
+			{%endif%}
+
+			<div class="card-deck">
+				{%for product in products_on_sale%}
+				 	<div class="card" style="width: 18rem;">
+			  			<a href="/view/product/{{product['id']}}">
+			  				<img src="{{url_for('static', filename = 'images/products/'+ product['image'])}}" class="card-img-top" alt="...">
+			  			</a>
+			  			<div class="card-body">
+			    			<h5 class="card-title">{{product['product_name']}}</h5>
+			  			</div>
+					</div>
+				{%endfor%}
+			</div>
+			<div class="profile-buttons">
+				<a href="/all/products/sale" class="btn btn-danger">Wiew all</a>
+				<a href="/add/product" class="btn btn-danger">Add a product</a>
+			</div>
+			<h2>Products you have saved:</h2>
+			{%if not saved_products:%}
+				<p>Looks like you haven't saved a product yet!</p>
+			{%endif%}
+
+			<div class="card-deck">
+				{%for product in saved_products%}
+				 	<div class="card" style="width: 18rem;">
+			  			<a href="/view/product/{{product['id']}}">
+			  				<img src="{{url_for('static', filename = 'images/products/'+ product['image'])}}" class="card-img-top" alt="...">
+			  			</a>
+			  			<div class="card-body">
+			    			<h5 class="card-title">{{product['product_name']}}</h5>
+			  			</div>
+					</div>
+				{%endfor%}
+			</div>
+			<div class="profile-buttons">
+				<a href="/all/products/saved" class="btn btn-danger">Wiew all</a>
+				<a href="/categories" class="btn btn-danger">Add interest fields</a>
+			</div>
+		</div>
+
+		<footer>
+			<div class="links">
+				<p>Made in <img src="{{url_for('static', filename = 'images/kosovo.svg')}}" title = "Kosovo">  with  <i id="heart" class="fa fa-heart" aria-hidden="true"></i></p>
+				<div class="social-icons">
+					<a href="https://www.facebook.com/diellza.aliu.31945?ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/dielllza_" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/_2ndhnd_/" target="_blank"><i class="fa fa-instagram"></i></a>
+				</div>
+				<p>Icons from<a href="https://www.flaticon.com/" title="Flaticon"><img  id="flaticon" src="{{url_for('static', filename = 'images/flaticon.png')}}"></a></p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

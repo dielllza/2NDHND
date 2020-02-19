@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="{{url_for('static',filename = 'images/cart.png')}}">
+	<title>2nd Hand</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sriracha|Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename = 'css/style.css')}}">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="navbar">
+			<a href="#" class="left-navbar">
+				<img class="img-fluid" src="{{url_for('static', filename = 'images/cart.png')}}" >
+				<h3>2ndhnd</h3>
+			</a>
+			<ul>
+				<li><a href="/login">Log in</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+		</div>
+		<div class="container main-img">
+			<img class="img-fluid" src="{{url_for('static',filename = 'images/shopping.jpg')}}">
+			<h1>Anything you'd like to buy or sell is one click away from you!</h1>
+			<p>Do you have anything that you don't use anymore and its just standing at the corner of your room? Simply upload your product in <span class ="brand-name">2ndhnd</span> and a shopper will find you within a few days. There are a lot of registered users who are interested in lots of categories like fashion, technology, sports, home appliances, you name it.<p>
+			<h1>Why <span class ="brand-name">2ndhnd</span> ?</h1>
+		</div>
+		<div class="why_secondhand row row-cols-1 row-cols-sm-2">
+			<div class="reason col">
+				<img src="{{url_for('static', filename = 'images/earth.png')}}">
+				<div class="reason-text">
+					<h4>Save the planet</h4>
+					<p>Did you know that it takes 1,800 gallons of water to make a pair of jeans? Anything destroys our planet a little when they are produced. At least secondhand stuff doesn't consume further resources. Plus it develops a culture of recycling in a way that millions of goods don't become a waste and instead are used for good.</p>
+				</div>
+			</div>
+			<div class="reason col">
+				<img src="{{url_for('static', filename = 'images/money.png')}}">
+				<div class="reason-text">
+					<h4>Save your money</h4>
+					<p>You can have those famous brands you can't afford to buy for half of their prize or even less. You even get a better quality by making your ends in your other bills and obligations.  </p>
+				</div>
+			</div>
+			<div class="reason col">
+				<img src="{{url_for('static', filename = 'images/watch.png')}}">
+				<div class="reason-text">
+					<h4>Save your time</h4>
+					<p>Don't you just get bored by malls while spending hours on hundreds of shops, and most of the time you don't get to buy anything. Well those long searches are over. Follow your favorite category online, search exactly what you need and boom. You are done within minutes!</p>
+				</div>
+			</div>
+			<div class="reason col">
+				<img src="{{url_for('static', filename = 'images/iron.png')}}">
+				<div class="reason-text">
+					<h4>Buy/Sell anything</h4>
+					<p>Literally! We have various categories starting from fashion to home furniture, phones to cars, sports and  even books. Follow your favorite category and see all the products you might be interested in. Or upload the products you don't need and wait for that phone call!</p>
+				</div>
+			</div>
+		</div>
+		<div class="register round-corners-top">
+			<h1>So what are you waiting for?</h1>
+			<p>It only takes a minute to register to our site and its completely free!</p>
+		</div>
+		<footer>
+			<div class="register round-corners-bottom">
+				<a class="btn btn-lg btn-warning" href="/register">Get Started</a>
+			</div>
+			<div class="links" id="contact">
+				<p>Made in <img src="{{url_for('static', filename = 'images/kosovo.svg')}}" title = "Kosovo">  with  <i id="heart" class="fa fa-heart" aria-hidden="true"></i></p>
+				<div class="social-icons">
+					<a href="https://www.facebook.com/diellza.aliu.31945?ref=bookmarks" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/dielllza_" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/_2ndhnd_/" target="_blank"><i class="fa fa-instagram"></i></a>
+				</div>
+				<p>Icons from<a href="https://www.flaticon.com/" title="Flaticon"><img  id="flaticon" src="{{url_for('static', filename = 'images/flaticon.png')}}"></a></p>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
